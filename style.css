@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Concert One', cursive;
+  background: #000814;
+}
+
+i, svg {
+  pointer-events: none;
+}
+
+.kick-pad, .snare-pad, .hihat-pad {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: #72ddf7;
+}
+
+.snare-pad {
+  background: #f7aef8;
+}
+
+.hihat-pad {
+  background: #7bf1a8;
+}
+
+.kick-pad.active {
+  background: #72ddf7;
+  box-shadow: 0 0 5px #72ddf7, 0 0 15px #72ddf7, 0 0 30px #72ddf7, 0 0 60px #72ddf7;
+}
+
+.snare-pad.active {
+  background: #f7aef8;
+  box-shadow: 0 0 5px #f7aef8, 0 0 15px #f7aef8, 0 0 30px #f7aef8, 0 0 60px #f7aef8;
+}
+
+.hihat-pad.active {
+  background: #7bf1a8;
+  box-shadow: 0 0 5px #7bf1a8, 0 0 15px #7bf1a8, 0 0 30px #7bf1a8, 0 0 60px #7bf1a8;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hihat-track, .snare-track, .kick-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick-pad, .kick-track {
+  margin-top: 30px;
+}
+
+.kick, .snare, .hihat {
+  display: flex;
+}
+
+.kick div, .snare div, .hihat div {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  background: #e2a0ff;
+  box-shadow: 0 0 5px #e2a0ff, 0 0 15px #e2a0ff;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 9px;
+  border-radius: 10px;
+  border-color: #e2a0ff;
+  border-width: 5px;
+}
+
+.controls h1 {
+  background-color: #ffef9f;
+  box-shadow: 0 0 5px #ffef9f, 0 0 15px #ffef9f;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: #c9184a;
+  box-shadow: 0 0 5px #c9184a, 0 0 15px #c9184a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s all ease;
+}
+
+.play::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.8s;
+}
+
+.play:hover::before {
+  transform: skewX(45deg) translateX(150%);
+}
+
+.play:hover {
+  letter-spacing: 4px;
+  transform: scale(1.1)
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  background: #bfdbf7;
+  box-shadow: 0 0 5px #bfdbf7, 0 0 15px #bfdbf7;
+  border: none;
+  border-radius: 10px;
+}
+
+.mute.active {
+  background: rgb(182, 182, 182);
+  box-shadow: 0 0 1px rgb(182, 182, 182);
+  border: none;
+}
+
+.tempo {
+  display: flex;
+  margin: 3rem;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 20%;
+  height: 10px;
+  position: relative;
+  background: #72ddf7;
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px #72ddf7, 0 0 15px #72ddf7;
+}
+
+.tempo p {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-left: 10px;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width:450px) {
+  .kick-track, .snare-track, .hihat-track {
+    display: block;
+    flex-direction: column;
+    width: 90%;
+  }
+  .kick-pad, .snare-pad, .hihat-pad {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .controls {
+    width: 90%;
+    margin: auto;
+  }
+  .controls h1 {
+    padding: 5px;
+    padding-top: 0px;
+    border-radius: 10px;
+  }
+  .controls button {
+    padding: 0.2rem;
+    font-size: 1rem;
+    border-width: 3px;
+  }
+  select {
+    padding: 4px;
+    font-size: 1rem;
+  }
+  .play {
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+  .tempo p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  .tempo {
+    margin-top: 3rem;
+    width: 90%;
+  }
+  .tempo-slider {
+    padding: 0.2rem;
+    width: 40%;
+    height: 10px;
+  }
+}
