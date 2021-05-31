@@ -218,6 +218,7 @@ select {
   .controls h1 {
     padding:0px 5px;
     border-radius: 10px;
+    align-items: center;
   }
   .controls button {
     padding: 0.2rem;
