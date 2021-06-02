@@ -301,13 +301,11 @@ input::-webkit-outer-spin-button{
     margin-left: 10px;
   }
   .tempo p span:before{
-    width: 30px;
     left: 7px;
   }
   .tempo p span input{
     font-weight: bold;
     font-size: 1.2rem;
-    width: 30px;
   }
 .tempo div{
   font-weight: bold;
