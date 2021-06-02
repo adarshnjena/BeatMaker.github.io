@@ -40,6 +40,9 @@ class DrumKit {
       }
     });
     this.index++;
+    if(this.index==8){
+      this.index=0;
+    }
   }
   start() {
     const interval = (60 / this.bpm) * 1000;
