@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -111,7 +112,7 @@ i, svg {
 }
 
 .play {
-  padding: 1rem 2rem;
+  padding: 0.9rem 1rem;
   font-size: 1.5rem;
   background: #c9184a;
   box-shadow: 0 0 5px #c9184a, 0 0 15px #c9184a;
@@ -123,6 +124,7 @@ i, svg {
   position: relative;
   overflow: hidden;
   transition: 0.5s all ease;
+  font-family: 'Concert One', cursive;
 }
 
 .play::before {
@@ -167,12 +169,13 @@ select {
   width: 50%;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.tempo-slider {
+#inputRange{
   padding: 0.2rem;
   -webkit-appearance: none;
-  margin: 1rem 0rem;
+  margin: 1rem 0;
   width: 20%;
   height: 10px;
   position: relative;
@@ -180,6 +183,17 @@ select {
   cursor: pointer;
   border-radius: 1rem;
   box-shadow: 0 0 5px #72ddf7, 0 0 15px #72ddf7;
+  outline: none;
+  transition: all 300ms ease;
+}
+
+#inputRange::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: solid 2px black;
 }
 
 .tempo p {
@@ -188,6 +202,54 @@ select {
   text-align: center;
   color: white;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.tempo p span input{
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  color: #438fa5;
+  border: none;
+  border-radius: 10px;
+  background-color: #000814;
+  width:70px;
+  font-family: 'Concert One', cursive;
+  cursor: pointer;
+  transition: all 300ms ease;
+  outline: none;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+  display: none;
+}
+
+.tempo p span{
+  position: relative;
+  cursor: pointer;
+  color: #438fa5;
+}
+.tempo p span::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  left: 7px;
+  width:100%;
+  height:2px;
+  border-radius: 100%;
+  background-color: #438fa5;
+  box-shadow: 0 0 5px #438fa5, 0 0 20px #438fa5,0 0 40px #438fa5,0 0 60px #438fa5;
+  transform: scale(0);
+  transition: all 300ms ease;
+}
+
+.tempo:hover p span::before{
+   transform: scale(1);
+}
+
+.tempo p span:focus-within::before{
+  transform: scale(1);
 }
 
 @keyframes playTrack {
@@ -208,8 +270,7 @@ select {
   .kick-pad, .snare-pad, .hihat-pad {
     width: 2.2rem;
     height: 2.2rem;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px auto auto;
   }
   .controls {
     width: 90%;
@@ -239,13 +300,28 @@ select {
     font-size: 1.2rem;
     margin-left: 10px;
   }
+  .tempo p span:before{
+    width: 30px;
+    left: 7px;
+  }
+  .tempo p span input{
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 30px;
+  }
+.tempo div{
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+}
+
   .tempo {
     margin-top: 3rem;
     width: 90%;
   }
-  .tempo-slider {
+ #inputRange{
     padding: 0.2rem;
     width: 40%;
     height: 10px;
   }
+
 }

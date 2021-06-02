@@ -63,9 +63,7 @@
             <i class="fas fa-volume-mute"></i>
           </button>
           <select name="hihat-select" id="hihat-select">
-            <option value="./sounds/hihat-acoustic01.wav"
-              >Hihat Acoustic</option
-            >
+            <option value="./sounds/hihat-acoustic01.wav">Hihat Acoustic</option>
             <option value="./sounds/hihat-808.wav">808 Hihat</option>
           </select>
         </div>
@@ -84,12 +82,18 @@
       <div class="tempo">
         <input
           type="range"
-          class="tempo-slider"
           max="300"
           min="20"
           value="150"
+          id="inputRange"
+          required
+          onInput="numValChange()"
         />
-        <p>Tempo: <span class="tempo-nr">150</span></p>
+        <p>
+          Tempo:-<span class="tempo-nr">
+          <input class="tempo-nr" id="inputNum" onfocusin="underlineVisible()"  onchange="this.value = minMaxValidationFunction(this.value)" type="number" value="150" required/>
+          </span>
+        </p>
       </div>
     </div>
 
@@ -102,6 +106,5 @@
       integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
       crossorigin="anonymous"
     ></script>
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
   </body>
-</html>
