@@ -22,7 +22,7 @@ BeatMaker Mini is a lightweight mini project that allows users to create drum be
 
 To get started with BeatMaker Mini, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/beatmaker-mini.git`
+1. Clone the repository: `git clone [https://github.com/your-username/beatmaker-mini.git](https://github.com/adarshnjena/BeatMaker.github.io)`
 2. Open `index.html` in your preferred web browser.
 3. Start tapping on the drum pads to trigger the corresponding drum sounds.
 4. Adjust the tempo and timing controls to experiment with different rhythms.
