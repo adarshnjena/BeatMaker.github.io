@@ -39,7 +39,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-- The drum sounds used in this project are sourced from [SampleSwap](https://sampleswap.org/).
-- Special thanks to the contributors and maintainers of the project for their efforts.
+- The drum sounds used in this project are sourced from internet.
+- Special thanks to devEd (youtube channel) for this wonderful idea.
 
 Enjoy creating your drum beats with BeatMaker Mini!
