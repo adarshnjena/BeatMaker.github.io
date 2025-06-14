@@ -1,45 +1,68 @@
-# BeatMaker Mini
+# BeatMaker
 
-BeatMaker Mini is a lightweight mini project that allows users to create drum beats using basic drum sounds. This project provides an easy-to-use interface for beat production, making it suitable for music enthusiasts, beginners, and anyone looking to experiment with rhythm and composition.
+BeatMaker is an interactive web-based drum machine that allows you to create beats using a variety of drum sounds. With an intuitive interface and responsive design, it's perfect for music producers, DJs, and anyone who wants to experiment with rhythm and music production right in their browser.
 
-![BeatMaker Mini Screenshot](/screenshot.png)
+![BeatMaker Screenshot](/vibe-cat.gif)
 
-## Features
+[Live Demo](https://adarshnjena.github.io/BeatMaker.github.io/)
 
-- **Intuitive Drum Pad Interface:** The project offers a simple drum pad interface where users can trigger drum sounds by tapping on virtual pads. Each pad corresponds to a specific percussion element, such as kick, snare, hi-hat, and cymbals.
+## 🎵 Features
 
-- **Basic Drum Sound Library:** BeatMaker Mini comes with a selection of high-quality, pre-loaded drum sounds that cover essential elements needed to create various beat patterns. These sounds are carefully curated to provide versatility and inspire creativity.
+- **16-Pad Drum Machine** - Play 16 different drum sounds with a simple click or keyboard shortcuts
+- **Tempo Control** - Adjust the BPM to match your desired rhythm
+- **Active Pad Highlighting** - Visual feedback for active pads
+- **Responsive Design** - Works on both desktop and mobile devices
+- **Keyboard Support** - Use your computer keyboard to trigger sounds
+- **Modern UI/UX** - Clean and intuitive interface with smooth animations
+- **High-Quality Samples** - Professionally recorded drum sounds
 
-- **Real-time Beat Composition:** Users can compose beats in real-time by tapping on the drum pads. The sounds are instantly triggered, allowing users to experiment, refine, and fine-tune their beats on the fly.
+## 🚀 Getting Started
 
-- **Tempo and Timing Control:** Adjust the tempo and timing controls to set the speed and rhythm of your beats. Explore different tempos to create energetic and dynamic beats or slow it down for more laid-back grooves.
+### Option 1: Use Online
+Simply visit the [live demo](https://adarshnjena.github.io/BeatMaker.github.io/) to start creating beats instantly.
 
-- **Play and Loop Features:** Play your beats in a continuous loop, enabling you to build layers and experiment with different sound combinations. This feature helps in refining your beats and creating complex compositions.
+### Option 2: Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/adarshnjena/BeatMaker.github.io.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd BeatMaker.github.io
+   ```
+3. Open `index.html` in your web browser
+4. Start creating beats by clicking the pads or using your keyboard (Q-P, A-L, Z-M, 1-4)
 
-- **Export and Share:** Export your created beats as audio files, which can be saved locally or shared with others. This functionality facilitates collaboration with fellow musicians or integration with digital audio workstations (DAWs) for further music production.
+## 🛠️ Development
 
-## Getting Started
+### Technologies Used
+- HTML5, CSS3, and Vanilla JavaScript
+- Web Audio API for sound processing
+- CSS Grid and Flexbox for responsive layout
 
-To get started with BeatMaker Mini, follow these steps:
+## 🤝 Contributing
 
-1. Clone the repository: `git clone [https://github.com/your-username/beatmaker-mini.git](https://github.com/adarshnjena/BeatMaker.github.io)`
-2. Open `index.html` in your preferred web browser.
-3. Start tapping on the drum pads to trigger the corresponding drum sounds.
-4. Adjust the tempo and timing controls to experiment with different rhythms.
-5. Use the play and loop features to build and refine your beats.
-6. Export your beats as audio files for saving or sharing.
+Contributions are welcome! If you'd like to contribute, please:
+1. Fork the repository
+2. Create a new branch for your feature
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
 
-## Contributions and Feedback
+## 🐛 Reporting Issues
 
-Contributions, bug reports, and feature requests are welcome! If you encounter any issues or have suggestions to improve BeatMaker Mini, please [open an issue](https://github.com/your-username/beatmaker-mini/issues) on the project repository.
+Found a bug or have a feature request? Please [open an issue](https://github.com/adarshnjena/BeatMaker.github.io/issues) on GitHub.
 
-## License
+## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.txt).
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-- The drum sounds used in this project are sourced from internet.
-- Special thanks to devEd (youtube channel) for this wonderful idea.
+- Drum samples from various free sources
+- Inspired by [devEd](https://www.youtube.com/c/DevEd)'s tutorials
+- Thanks to all contributors who have helped improve this project
 
-Enjoy creating your drum beats with BeatMaker Mini!
+---
+
+🎧 Happy Beat Making! 🥁
